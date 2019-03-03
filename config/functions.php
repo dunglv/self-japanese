@@ -63,7 +63,7 @@ if (!function_exists('file_to_array')) {
 		$file = fopen($path, 'r');
 		if($file){
 			while (!feof($file)) {
-				$arr[] = fgets($file);
+				$arr[] = _BR(fgets($file));
 			}
 		}
 		fclose($file);
@@ -76,16 +76,17 @@ if (!function_exists('file_to_array')) {
 if (!function_exists('get_rand_word')) {
 	function get_rand_word($arr = '')
 	{
+		
 		$word = [
 			'jp' => '',
 			'en' => ''
 		];
-		$rand_word = explode(',', $arr[array_rand($arr)]);
+		$rand_word = explode(',', _BR($arr[array_rand($arr)]));
 		
 		if (count($rand_word) > 1 ) {
 			$word = [
 				'jp' => $rand_word[0],
-				'en' => $rand_word[1]
+				'en' => _BR($rand_word[1])
 			];
 		}
 
@@ -100,7 +101,7 @@ if (!function_exists('get_jp_word')) {
 		$jp = '';
 		foreach ($arr as $line) {
 			$word = explode(',', $line);
-			if(count($word) > 1 && $word[1] == $en){
+			if(count($word) > 1 &&  _BR($word[1]) == $en){
 				return $word[0];
 			}
 		}
@@ -108,3 +109,12 @@ if (!function_exists('get_jp_word')) {
 		return $jp;
 	}
 }
+
+// Create file katakana
+if (!function_exists('_BR')) {
+	function _BR($char = '')
+	{
+		return str_replace(["\n", "\r"], '', $char);
+	}
+}
+

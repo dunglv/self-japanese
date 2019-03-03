@@ -1,3 +1,4 @@
 RewriteEngine On
 RewriteBase /
 RewriteRule ^([a-zA-Z0-9\-]+)$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9\-]+)\/handle/(.*)$ ajax/handle.php?function=$2 [L,QSA]

@@ -1,5 +1,5 @@
 <?php 
-$filename = date('Ymd');
+    $filename = date('Ymd');
 	create_katakana_file(base_path("/data/katakana/{$filename}.txt"));
 	$arr = file_to_array(base_path("/data/katakana/{$filename}.txt"));
 	$word = get_rand_word($arr);
@@ -25,4 +25,25 @@ $filename = date('Ymd');
   	</fieldset>
   	<button type="submit" class="btn btn-primary">Check now!</button>
   </form>
+
+  <!-- <div class="card-flip">
+        <canvas id="cardFlip" width="300" height="300"></canvas>
+        <canvas id="stroke" width="300" height="300"></canvas>
+  </div> -->
 </div>
+<script>
+    // $(function(){
+    //     var cv = document.getElementById('cardFlip');
+    //     var context = cv.getContext('2d');
+    //     context.font = '140pt Calibri';
+    //     context.fillStyle = '#28a745';
+    //     context.fillText("<?php echo $word['jp']; ?>", 60, 210);
+    //     var url = window.location.href;
+    //     var x = 100, y = 200;
+    //     var max = 10, min = 300;
+    //     var requestAnimationFrame = window.requestAnimationFrame || 
+    //                         window.mozRequestAnimationFrame || 
+    //                         window.webkitRequestAnimationFrame || 
+    //                         window.msRequestAnimationFrame;
+    // });
+</script>
