@@ -57,6 +57,9 @@
 			</div>
 		</div>
 	</div>
+	<footer class="bg-dark">
+		Copyright LVDMT@2018. Powerd by <a href="http://luongvietdung.com">Luong Viet Dung</a>
+	</footer>
 	<script type="text/javascript" src="./js/card.js"></script>
 </body>
 </html>

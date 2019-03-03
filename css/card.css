@@ -1,79 +1,95 @@
 #card {
-	padding: 15px 0;
+    padding: 15px 0;
 }
 
 #card .card-kata {
     height: 300px;
     width: 300px;
     position: relative;
-       margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
 }
 
 #card .card-kata .item-card {
-	position: absolute;
-	left: 0;
-	top: 0;
-	cursor: pointer;
-	height: 100%;
-	width: 100%;
-	font-size: 6em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    font-size: 6em;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     background: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
     border-radius: 4px;
     box-shadow: 0px 0px 6px -3px #afafaf;
     -webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
 }
 
-#card .card-kata .item-card.card-fore{
-	z-index: 1;
-	-webkit-transform: rotateY(0deg);
-	-ms-transform: rotateY(0deg);
-	-o-transform: rotateY(0deg);
-	transform: rotateY(0deg);
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
-	-webkit-transition-delay: 0.5s;
-	-o-transition-delay: 0.5s;
-	transition-delay: 0.5s;
-}
-#card .card-kata .item-card.card-behind{
-	z-index: 0;
-	background: #ebffef;
-	-webkit-transform: rotateY(90deg);
-	-ms-transform: rotateY(90deg);
-	-o-transform: rotateY(90deg);
-	transform: rotateY(90deg);
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
+#card .card-kata .item-card.card-fore {
+    z-index: 1;
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
 }
 
-#card .card-kata.open .item-card.card-fore{
-	-webkit-transform: rotateY(90deg);
-	-ms-transform: rotateY(90deg);
-	-o-transform: rotateY(90deg);
-	transform: rotateY(90deg);
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
+#card .card-kata .item-card.card-behind {
+    z-index: 0;
+    background: #ebffef;
+    -webkit-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
 }
-#card .card-kata.open .item-card.card-behind{
-	-webkit-transform: rotateY(0deg);
-	-ms-transform: rotateY(0deg);
-	-o-transform: rotateY(0deg);
-	transform: rotateY(0deg);
-	-webkit-transition: 0.5s;
-	-o-transition: 0.5s;
-	transition: 0.5s;
-	-webkit-transition-delay: 0.5s;
-	-o-transition-delay: 0.5s;
-	transition-delay: 0.5s;
+
+#card .card-kata.open .item-card.card-fore {
+    -webkit-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+#card .card-kata.open .item-card.card-behind {
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    -o-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+}
+
+footer {
+	color: #fff;
+	padding: 15px;
+}
+
+footer a{
+	color: #28a745;
 }
