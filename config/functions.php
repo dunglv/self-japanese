@@ -49,7 +49,7 @@ if (!function_exists('create_katakana_file')) {
 			"ご,go"
 		];
 		for ($i=0; $i < count($arr); $i++) { 
-			fwrite($file, $arr[$i]."\n");
+			fwrite($file, $i == count($arr) - 1 ? $arr[$i] : $arr[$i]."\n");
 		}
 		fclose($file);
 	}
